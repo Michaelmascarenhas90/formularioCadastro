@@ -104,11 +104,7 @@ function App() {
                 onChange={handleChange}
               >
                 {idList.map((item) => (
-                  <MenuItem
-                    selected={item.id[1]}
-                    value={item.value}
-                    key={item.id}
-                  >
+                  <MenuItem selected={item.id[1]} value={item.id} key={item.id}>
                     {item.value}
                   </MenuItem>
                 ))}
