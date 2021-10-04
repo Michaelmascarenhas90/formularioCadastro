@@ -28,7 +28,9 @@ function App() {
   const [{ values, loading }, handleChange, handleSubmit] = useForm();
 
   const enviarContato = () => {
-    alert(JSON.stringify(values));
+    // alert(JSON.stringify(values));
+
+    axios.post("").then((req) => req.send(values));
   };
 
   return (
@@ -45,13 +47,15 @@ function App() {
                 type="number"
                 name="cpf"
                 required={true}
-                sx={{ m: 1, width: "20ch" }}
+                sx={{ m: 1, width: "30ch" }}
                 className="input-login"
                 fullWidth
                 onChange={handleChange}
               />
             </InputLabel>
           </div>
+        </section>
+        <section className="form-control form-control-name">
           <div className="content-name">
             <InputLabel htmlFor="firstName">
               <TextField
@@ -100,11 +104,7 @@ function App() {
                 onChange={handleChange}
               >
                 {idList.map((item) => (
-                  <MenuItem
-                    selected={item.id[1]}
-                    value={item.value}
-                    key={item.id}
-                  >
+                  <MenuItem selected={item.id[1]} value={item.id} key={item.id}>
                     {item.value}
                   </MenuItem>
                 ))}
@@ -150,7 +150,7 @@ function App() {
                 endIcon={<SendIcon />}
                 type="submit"
               >
-                {loading ? "Enviando..." : "Enviar"}
+                {loading ? "Cadastrando..." : "Cadastrar"}
               </Button>
             </div>
           </div>

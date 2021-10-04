@@ -29,9 +29,11 @@ form {
 }
 
 form .form-control-name {
-    width:100%;
+    width: 100%;
+    display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
+
 }
 
 form .form-control-name .content-name {
