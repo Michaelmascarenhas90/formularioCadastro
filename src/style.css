@@ -1,31 +1,62 @@
-html,
-body,
-#root {
-  height: 100%;
-}
-
 body {
-  background-color: #f8f8f8 !important;
+    background-color: white;
 }
 
 .container-user {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+form {
+    width: 70%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%)
 }
 
 .form-user {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.input-user {
-  width: 90%;
-  margin-bottom: 15px !important;
+    padding: 3%;
 }
 
 .form-control {
-    margin-top: 2%;
+    margin: 0.5em
+}
+
+form .form-control-name {
+    width:100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+form .form-control-name .content-name {
+    position: relative;
+    float: left;
+    width: 20%;
+    margin-left: 0.4em;
+    text-align: center;
+}
+
+.button-form {
+    margin-top: 50px;
+    align-items: center;
+    float: right;
+    position: relative;
+}
+
+.input-login {
+    background: white;
+}
+
+.content-select input {
+    min-width: 30px;
+}
+
+.input-email {
+    width: 90%;
 }
