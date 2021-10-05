@@ -32,12 +32,13 @@ function App() {
     axios.post("/user", {
       ...values,
     });
+    alert(JSON.stringify(values));
   };
 
   return (
-    <Fragment className=".container-user">
-      <h1 className="title">Cadastro de Usuários</h1>
+    <Fragment>
       <form className="form-user" onSubmit={handleSubmit(enviarContato)}>
+        <h1 className="title">Cadastro de Usuários</h1>
         <section className="form-control form-control-name">
           <div className="content-name">
             <InputLabel htmlFor="cpf">
