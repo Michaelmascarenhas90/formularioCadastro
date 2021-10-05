@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 // import { CircularProgress, TextField, InputAdornment, IconButton } from '@material-ui/core';
 import useForm from "./hooks/useForm";
+import axios from "axios";
 
 import Button from "@material-ui/core/Button";
 import InputLabel from "@mui/material/InputLabel";
@@ -28,7 +29,9 @@ function App() {
   const [{ values, loading }, handleChange, handleSubmit] = useForm();
 
   const enviarContato = () => {
-    alert(JSON.stringify(values));
+    axios.post("/user", {
+      ...values,
+    });
   };
 
   return (
